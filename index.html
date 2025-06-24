@@ -195,7 +195,38 @@ body.dark-theme .home-description {
       font-size: 1rem;
   }
 
- 
+  @media (max-width: 480px) {
+    .home-description {
+      text-align: left;
+      width: 400px;
+    }
+
+    .home-scroll-button{
+      display: none; /* Hide scroll button on smaller screens */
+    }
+
+  }
+
+  .email-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #6d6a7c;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .email-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    .email-link {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+  }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -265,6 +296,7 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
+
             <div class="home-data">
               <h1 id="home-title" class="home-title">👋 Hi, I'm <span class="highlight">Sahil Jadhav</span></h1>
               <h3 id="home-subtitle" class="home-subtitle"></h3>
@@ -275,7 +307,11 @@ window.addEventListener('DOMContentLoaded', () => {
               <a href="#contact" class="button button-flex">
                 <i class="fa-regular fa-envelope button-icon"></i>&nbsp; Contact Me
               </a>
+              <a href="mailto:sahiljadhav1617@gmail.com?subject=Let's Connect&body=Hi Sahil," class="email-link" >sahiljadhav1617@gmail.com
+            </a>
             </div>
+            
+              
 
           </div>
 
@@ -287,13 +323,27 @@ window.addEventListener('DOMContentLoaded', () => {
               <span class="home-scroll-name">Scroll down</span>
               <i class="fa-solid fa-angles-down home-scroll-arrow"></i>
             </a>
-
-            <a href="mailto:sahiljadhav1617@gmail.com?subject=Let's Connect&body=Hi Sahil,"  style="margin-left: 130px;">sahiljadhav1617@gmail.com
-            </a>
           </div>
         </div>
       </section>
 
+
+      <style>
+        @media (max-width: 480px) {
+          .about-description {
+            padding-left: 0.6rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-top: 20px;
+            text-align: justify;
+            width: 400px;
+          }
+
+          .about-img{
+            display: none;
+          }
+        }
+      </style>
 
       <!-- About Me -->
       <section class="about section" id="about">

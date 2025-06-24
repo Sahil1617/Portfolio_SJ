@@ -188,7 +188,7 @@ img {
   max-width: 968px;
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -1026,7 +1026,7 @@ img {
   }
 
   .home-content {
-    padding-top: 5.5rem;
+   
     column-gap: 2rem;
   }
 
