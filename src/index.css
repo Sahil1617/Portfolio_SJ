@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300 overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-foreground rounded-full border-2 border-background;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-24 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto flex flex-col justify-center relative;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-extrabold mb-4 text-center font-heading;
+  }
+  .section-subtitle {
+    @apply text-lg md:text-xl text-mutedForeground mb-16 text-center block font-medium;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-white font-bold rounded-full border-2 border-foreground shadow-hard hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-hard-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-hard-active transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent text-foreground font-bold rounded-full border-2 border-foreground hover:bg-tertiary hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-hard-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-hard-active transition-all duration-300;
+  }
+
+  /* Cards */
+  .card-sticker {
+    @apply bg-card border-2 border-foreground rounded-2xl shadow-soft-hard hover:-rotate-1 hover:scale-[1.02] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] overflow-hidden;
+  }
+
+  /* Input */
+  .input-playful {
+    @apply w-full bg-input border-2 border-border rounded-xl px-4 py-3 text-foreground font-medium outline-none transition-all duration-300 focus:border-accent focus:shadow-hard;
+  }
+  
+  /* Textures */
+  .bg-dot-pattern {
+    background-image: radial-gradient(#CBD5E1 2px, transparent 2px);
+    background-size: 24px 24px;
+  }
+}
