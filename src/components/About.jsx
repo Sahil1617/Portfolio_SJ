@@ -87,7 +87,7 @@ const About = () => {
               
               <div className="bg-tertiary border-3 border-foreground rounded-2xl p-4 shadow-hard flex flex-col items-center text-center transform hover:-translate-y-1 transition-transform">
                 <Award className="w-6 h-6 text-foreground mb-1" />
-                <h4 className="text-3xl font-black font-heading text-foreground">10+</h4>
+                <h4 className="text-3xl font-black font-heading text-foreground">20+</h4>
                 <p className="text-xs font-extrabold uppercase text-foreground/80 tracking-wide mt-0.5">Projects Built</p>
               </div>
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.sahiljadhav8767.workers.dev/sitemap.xml
